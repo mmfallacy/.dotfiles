@@ -4,6 +4,12 @@ profile Home {
 	output "XMI Mi Monitor 0000000000000" position 1160,0 mode 3440x1440@99.991997Hz
 }
 
+profile Home2 {
+	output eDP-1 position 0,1440 mode 1920x1080
+	output "Lenovo Group Limited G24-20 U533923C" position 1920,1440 mode 1920x1080@164.996994Hz
+	output "Unknown Mi Monitor 0000000000000" position 1160,0 mode 3440x1440@99.991997Hz
+}
+
 profile Laptop {
 	output eDP-1 position 0,1440 mode 1920x1080
 }
