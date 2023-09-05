@@ -16,3 +16,12 @@ Neovim is a hyperextensible Vim-based text editor. I currently use [packer.nvim]
 - [ ] Migrate out of `null-ls`
 - [ ] * Migrate out of `mason` and use a bash script instead for installing LSPs
 
+## Version Control System: `git` and GitHub
+[Git](https://github.com/wbthomason/packer.nvim) is a free and open source distributed version control system. 
+### Installation
+- As per my `archinstall` configuration, I have already specified `git` as an additional package and hence should come out of the box with my Arch Installation.
+- Install `openssh` for generating 
+- After `stow`-ing, generate a new `ed25519` ssh key in `~/.ssh/id_ed25519` through `ssh-keygen -t ed25519 -c "<email>"`.
+- This then would generate a private ang public ssh key. Add this key then as authentication and signing on GitHub.
+
+
