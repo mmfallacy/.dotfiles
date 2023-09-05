@@ -8,3 +8,4 @@ include ./bar
 include ./binds
 
 exec kanshi
+exec_always autotiling
