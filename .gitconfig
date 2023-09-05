@@ -1,5 +1,7 @@
 [core]
 	editor = nvim
+[init]
+    defaultBranch = main
 [user]
 	email = monasterialma@gmail.com
 	name = mmfallacy
