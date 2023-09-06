@@ -3,9 +3,26 @@ set $menu wofi --show drun | xargs swaymsg exec --
 
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
+# Remove titlebars
+
+# Border config <normal|none|pixel>
+default_border pixel 5
+default_floating_border pixel 5
+
+client.focused "#ffffff" "#ff69b4" "#000000"
+client.focused_inactive "#ffffff" "#8d4856" "#000000"
+client.unfocused "#ffffff" "#8d4856" "#000000"
+
+# Title bar name alignment (disabled for default workspace layout)
+
+gaps inner 4
+gaps outer 3
+blur enable
+corner_radius 5
+
 include /etc/sway/config.d/*
 include ./bar
 include ./binds
 
-exec kanshi
+exec_always kanshi
 exec_always autotiling
