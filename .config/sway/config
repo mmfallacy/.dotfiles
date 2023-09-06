@@ -9,15 +9,26 @@ output * bg ~/.dotfiles/assets/wallpaper.jpg fill
 default_border pixel 3
 default_floating_border pixel 3
 
-client.focused "#ffffff" "#ff69b4" "#000000" "#ff69b4" 
-client.focused_inactive "#ffffff" "#8d4856" "#000000" "#8d4856" 
-client.unfocused "#ffffff" "#8d4856" "#000000" "#8d4856" 
+set $focus_border "#D65F76"
+set $inactive_border "#1E2430"
+
+client.focused "#ffffff" $focus_border "#000000" "#ff69b4" 
+client.focused_inactive "#ffffff" $inactive_border "#000000" $inactive_border
+client.unfocused "#ffffff" $inactive_border "#000000" $inactive_border
 
 # Title bar name alignment (disabled for default workspace layout)
 
-gaps inner 4
-gaps outer 3
+gaps inner 5
+gaps outer 5
 blur enable
+blur_passes 4
+blur_radius 7
+
+set $opacity 0.8
+for_window [app_id="$term"] opacity $opacity
+for_window [app_id=".*"] opacity $opacity
+for_window [class=".*"] opacity $opacity
+
 corner_radius 5
 
 include /etc/sway/config.d/*
