@@ -1,13 +1,13 @@
 set $term kitty
 set $menu wofi --show drun | xargs swaymsg exec --
 
-output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg ~/.dotfiles/assets/wallpaper.jpg fill
 
 # Remove titlebars
 
 # Border config <normal|none|pixel>
-default_border pixel 5
-default_floating_border pixel 5
+default_border pixel 3
+default_floating_border pixel 3
 
 client.focused "#ffffff" "#ff69b4" "#000000" "#ff69b4" 
 client.focused_inactive "#ffffff" "#8d4856" "#000000" "#8d4856" 
