@@ -9,9 +9,9 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 default_border pixel 5
 default_floating_border pixel 5
 
-client.focused "#ffffff" "#ff69b4" "#000000"
-client.focused_inactive "#ffffff" "#8d4856" "#000000"
-client.unfocused "#ffffff" "#8d4856" "#000000"
+client.focused "#ffffff" "#ff69b4" "#000000" "#ff69b4" 
+client.focused_inactive "#ffffff" "#8d4856" "#000000" "#8d4856" 
+client.unfocused "#ffffff" "#8d4856" "#000000" "#8d4856" 
 
 # Title bar name alignment (disabled for default workspace layout)
 
