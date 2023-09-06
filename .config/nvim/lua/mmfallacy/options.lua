@@ -36,3 +36,5 @@ o.incsearch = true
 -- Split
 o.splitbelow = false
 o.splitright = false
+
+o.modeline = true
