@@ -3,7 +3,7 @@ set $menu wofi --show drun | xargs swaymsg exec --
 
 output * bg ~/.dotfiles/assets/wallpaper.jpg fill
 
-# Remove titlebars
+focus_follows_mouse no
 
 # Border config <normal|none|pixel>
 default_border pixel 3
