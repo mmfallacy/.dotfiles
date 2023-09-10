@@ -1,3 +1,8 @@
+include /etc/sway/config.d/*
+include ./bar
+include ./binds
+include ./catppuccin-mocha
+
 set $term kitty
 set $menu wofi --show drun | xargs swaymsg exec --
 
@@ -9,12 +14,15 @@ focus_follows_mouse no
 default_border pixel 3
 default_floating_border pixel 3
 
-set $focus_border "#D65F76"
-set $inactive_border "#1E2430"
+set $_pink "#D65F76"
 
-client.focused "#ffffff" $focus_border "#000000" "#ff69b4" 
-client.focused_inactive "#ffffff" $inactive_border "#000000" $inactive_border
-client.unfocused "#ffffff" $inactive_border "#000000" $inactive_border
+# target               title     bg    text   indicator  border
+client.focused           $_pink $base $text  $pink $_pink
+client.focused_inactive  $overlay0 $base $text  $overlay0 $overlay0
+client.unfocused         $overlay0 $base $text  $overlay0 $overlay0
+client.urgent            $peach    $base $peach $peach  $peach
+client.placeholder       $overlay0 $base $text  $overlay0  $overlay0
+client.background        $base
 
 # Title bar name alignment (disabled for default workspace layout)
 
@@ -31,9 +39,7 @@ for_window [class=".*"] opacity $opacity
 
 corner_radius 5
 
-include /etc/sway/config.d/*
-include ./bar
-include ./binds
+
 
 exec_always kanshi
 exec_always autotiling
