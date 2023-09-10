@@ -24,4 +24,15 @@ Neovim is a hyperextensible Vim-based text editor. I currently use [packer.nvim]
 - After `stow`-ing, generate a new `ed25519` ssh key in `~/.ssh/id_ed25519` through `ssh-keygen -t ed25519 -c "<email>"`.
 - This then would generate a private ang public ssh key. Add this key then as authentication and signing on GitHub.
 
-
+## Window Manager: `swayfx`
+[Sway](https://swaywm.org/) is a tiling wayland compositor and a drop in replacement for the i3 window manager.
+[SwayFX](https://swaywm.org/) is a fork of `sway` but with eye candy.
+### Installation
+- Install `swayfx-git`
+### Configuration Dependencies
+- `kanshi` for dynamic monitor configuration.
+- `autotiling` for sway autotiling.
+- `grim`, `slurp`, `swappy`, `wl-clipboard` for screen region captures.
+- `waybar`
+- `wofi` as the launcher.
+- `kitty` as the terminal.
