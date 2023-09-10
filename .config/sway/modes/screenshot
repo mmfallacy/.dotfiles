@@ -27,20 +27,30 @@ mode "screenshot" {
     # Screenshot last region
     # Read last region from temp file => 
     # Capture region via grim => 
-    # Open swappy on captured region.
+    # Save screenshot to temp output file =>
+    # Pipe to clipboard
+    # Create a notification with the screenshot as the icon 
     bindsym Shift+s exec cat $TMP_LAST_REGION |\
             xargs -I {} grim -g "{}" - |\
-            swappy -f -, mode "default"
+            tee $TMP_OUTPUT |\
+            wl-copy &&\
+            notify-send --icon=$TMP_OUTPUT -t $NOTIFY_DUR $SUCCESS_MSG &&\
+            : , mode "default"
 
     # Screenshot a monitor/output
     # Select monitor => 
     # Save to temp file =>
     # Capture region via grim =>
-    # Open swappy on captured region.
+    # Save screenshot to temp output file =>
+    # Pipe to clipboard
+    # Create a notification with the screenshot as the icon 
     bindsym m exec slurp -o |\
             tee $TMP_LAST_REGION |\
             xargs -I {} grim -g "{}" - |\
-            swappy -f -, mode "default"
+            tee $TMP_OUTPUT |\
+            wl-copy &&\
+            notify-send --icon=$TMP_OUTPUT -t $NOTIFY_DUR $SUCCESS_MSG &&\
+            : , mode "default"
 
     # Screenshot a monitor/output
     # Get sway tree => 
@@ -49,14 +59,19 @@ mode "screenshot" {
     # Pipe parsed geometries as predefined rectangles for slurp selection 
     # Save to temp file =>
     # Capture region via grim =>
-    # Open swappy on captured region.
+    # Save screenshot to temp output file =>
+    # Pipe to clipboard
+    # Create a notification with the screenshot as the icon 
     bindsym w exec swaymsg -t get_tree |\
             jq -r '.. | select(.pid? and .visible?) | .rect' |\
             jq -r '"\(.x),\(.y) \(.width)x\(.height)"' |\
             slurp |\
             tee $TMP_LAST_REGION |\
             xargs -I {} grim -g "{}" - |\
-            swappy -f -, mode "default"
+            tee $TMP_OUTPUT |\
+            wl-copy &&\
+            notify-send --icon=$TMP_OUTPUT -t $NOTIFY_DUR $SUCCESS_MSG &&\
+            : , mode "default"
 
     bindsym q mode "default"
     bindsym Return mode "default"
