@@ -4,16 +4,25 @@
 bindsym $mod+Shift+S mode "screenshot"
 mode "screenshot" {
     set $TMP_LAST_REGION /tmp/slurp_last_region
+    set $TMP_OUTPUT /tmp/grim_last_output
+    set $NOTIFY_DUR 3000
+    set $SUCCESS_MSG "Screen Captured!"
 
     # Screenshot a region
     # Select Region => 
     # Save to temp file =>
     # Capture region via grim =>
-    # Open swappy on captured region.
+    # Save screenshot to temp output file =>
+    # Pipe to clipboard
+    # Create a notification with the screenshot as the icon 
     bindsym s exec slurp |\
             tee $TMP_LAST_REGION |\
-            xargs -I {} grim -g "{}" - |\
-            swappy -f -, mode "default"
+            xargs -I {} grim -g "{}" -|\
+            tee $TMP_OUTPUT |\
+            wl-copy &&\
+            notify-send --icon=$TMP_OUTPUT -t $NOTIFY_DUR $SUCCESS_MSG &&\
+            : , mode "default"
+
             
     # Screenshot last region
     # Read last region from temp file => 
