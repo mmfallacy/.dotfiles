@@ -95,4 +95,15 @@ mode "swap" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
+
+# ---------------------------------------------------------------------
+# Swap mode
+# ---------------------------------------------------------------------
+set $TMP_LAST_REGION /tmp/slurp_last_region
+
+# Screenshot a region
+bindsym $mod+Shift+s exec slurp > $TMP_LAST_REGION && grim -g "$(cat $TMP_LAST_REGION)" - | swappy -f -
+# Screenshot last region
+bindsym $mod+Shift+Alt+s exec grim -g "$(cat $TMP_LAST_REGION)" - | swappy -f -
+
 # vim: set ft=swayconfig:
