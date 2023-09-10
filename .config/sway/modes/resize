@@ -1,0 +1,22 @@
+# ---------------------------------------------------------------------
+# Resize mode
+# ---------------------------------------------------------------------
+bindsym $mod+r mode "resize"
+mode "resize" {
+    bindsym $left       resize shrink width 10px
+    bindsym $down       resize grow height 10px
+    bindsym $up         resize shrink height 10px
+    bindsym $right      resize grow width 10px
+
+    bindsym Shift+$left resize shrink width 50px
+    bindsym Shift+$down resize grow height 50px
+    bindsym Shift+$up   resize shrink height 50px
+    bindsym Shift+$right resize grow width 50px
+
+    bindsym q mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# vim: set ft=swayconfig:
+

@@ -45,25 +45,6 @@ bindsym $mod+Shift+4    move container to workspace number 4
 workspace back_and_forth yes
 bindsym $mod+u          workspace back_and_forth
 
-# ---------------------------------------------------------------------
-# Resize mode
-# ---------------------------------------------------------------------
-bindsym $mod+r mode "resize"
-mode "resize" {
-    bindsym $left       resize shrink width 10px
-    bindsym $down       resize grow height 10px
-    bindsym $up         resize shrink height 10px
-    bindsym $right      resize grow width 10px
-
-    bindsym Shift+$left resize shrink width 50px
-    bindsym Shift+$down resize grow height 50px
-    bindsym Shift+$up   resize shrink height 50px
-    bindsym Shift+$right resize grow width 50px
-
-    bindsym q mode "default"
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
 
 # ---------------------------------------------------------------------
 # Scratchpad
@@ -78,81 +59,5 @@ bindsym $mod+space      focus mode_toggle
 bindsym $mod+b          splith
 bindsym $mod+v          splitv
 
-
-# ---------------------------------------------------------------------
-# Swap mode
-# Source: [/u/Gaweringo](https://www.reddit.com/r/swaywm/comments/mmhvyf/swap_mode/)
-# ---------------------------------------------------------------------
-
-bindsym $mod+Shift+W mode "swap"
-mode "swap" {
-    bindsym $left mark --add "_swap", focus left, swap container with mark "_swap", focus left, unmark "_swap"
-    bindsym $down mark --add "_swap", focus down, swap container with mark "_swap", focus down, unmark "_swap"
-    bindsym $up mark --add "_swap", focus up, swap container with mark "_swap", focus up, unmark "_swap"
-    bindsym $right mark --add "_swap", focus right, swap container with mark "_swap", focus right, unmark "_swap"
-
-    bindsym q mode "default"
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
-# ---------------------------------------------------------------------
-# Swap mode
-# ---------------------------------------------------------------------
-
-# Screenshot a region
-
-bindsym $mod+Shift+S mode "screenshot"
-mode "screenshot" {
-    set $TMP_LAST_REGION /tmp/slurp_last_region
-
-    # Screenshot a region
-    # Select Region => 
-    # Save to temp file =>
-    # Capture region via grim =>
-    # Open swappy on captured region.
-    bindsym s exec slurp |\
-            tee $TMP_LAST_REGION |\
-            xargs -I {} grim -g "{}" - |\
-            swappy -f -, mode "default"
-            
-    # Screenshot last region
-    # Read last region from temp file => 
-    # Capture region via grim => 
-    # Open swappy on captured region.
-    bindsym Shift+s exec cat $TMP_LAST_REGION |\
-            xargs -I {} grim -g "{}" - |\
-            swappy -f -, mode "default"
-
-    # Screenshot a monitor/output
-    # Select monitor => 
-    # Save to temp file =>
-    # Capture region via grim =>
-    # Open swappy on captured region.
-    bindsym m exec slurp -o |\
-            tee $TMP_LAST_REGION |\
-            xargs -I {} grim -g "{}" - |\
-            swappy -f -, mode "default"
-
-    # Screenshot a monitor/output
-    # Get sway tree => 
-    # Parse as json, filter which has pid and is visible and get geometry
-    # Transform previous output to "<x>,<y> <width>x<height>" 
-    # Pipe parsed geometries as predefined rectangles for slurp selection 
-    # Save to temp file =>
-    # Capture region via grim =>
-    # Open swappy on captured region.
-    bindsym w exec swaymsg -t get_tree |\
-            jq -r '.. | select(.pid? and .visible?) | .rect' |\
-            jq -r '"\(.x),\(.y) \(.width)x\(.height)"' |\
-            slurp |\
-            tee $TMP_LAST_REGION |\
-            xargs -I {} grim -g "{}" - |\
-            swappy -f -, mode "default"
-
-    bindsym q mode "default"
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-
+include ./modes/*
 # vim: set ft=swayconfig:
