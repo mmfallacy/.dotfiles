@@ -11,3 +11,8 @@ zstyle :compinstall filename '/home/mmfallacy/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+eval "$(starship init zsh)"
