@@ -9,6 +9,7 @@ Neovim is a hyperextensible Vim-based text editor. I currently use [packer.nvim]
 - Run neovim and execute `:PackerSync`
 - Since I use the Mason plugin for installing new LSPs, we need to install `npm` and `unzip` as well (`paru -S npm unzip`).
 - Reopen neovim and wait for the LSPs to be reinstalled.
+- Install `ripgrep` as a dependency for the telescope configuration.
 
 ### TODO:
 > ** Tasks marked with * are still tentative. The list below is also ordered based on priority**
