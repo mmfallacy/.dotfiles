@@ -99,16 +99,17 @@ mode "swap" {
 # ---------------------------------------------------------------------
 # Swap mode
 # ---------------------------------------------------------------------
-set $TMP_LAST_REGION /tmp/slurp_last_region
 
 # Screenshot a region
 
 bindsym $mod+Shift+S mode "screenshot"
 mode "screenshot" {
-        bindsym R exec slurp > $TMP_LAST_REGION && grim -g "$(cat $TMP_LAST_REGION)" - | swappy -f -
+        set $TMP_LAST_REGION /tmp/slurp_last_region
+
+        bindsym r exec slurp > $TMP_LAST_REGION && grim -g "$(cat $TMP_LAST_REGION)" - | swappy -f -, mode "default"
 # Screenshot last region
-        bindsym L exec grim -g "$(cat $TMP_LAST_REGION)" - | swappy -f -
-        bindsym M exec grim -g "$(cat $TMP_LAST_REGION)" - | swappy -f -
+        bindsym l exec grim -g "$(cat $TMP_LAST_REGION)" - | swappy -f -, mode "default"
+        bindsym m exec grim -g "$(cat $TMP_LAST_REGION)" - | swappy -f -, mode "default"
 
         bindsym q mode "default"
         bindsym Return mode "default"
