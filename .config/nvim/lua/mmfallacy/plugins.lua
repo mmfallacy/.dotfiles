@@ -46,6 +46,11 @@ function plugins(use)
     }
 
     use {
+        'norcalli/nvim-colorizer.lua',
+        config = function() require "colorizer".setup() end
+    }
+
+    use {
         'AndrewRadev/tagalong.vim',
         config = function()
             vim.cmd [[
