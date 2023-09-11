@@ -73,6 +73,11 @@ mode "screenshot" {
             notify-send --icon=$TMP_OUTPUT -t $NOTIFY_DUR $SUCCESS_MSG &&\
             : , mode "default"
 
+    # Edit previously captured file via swappy
+    bindsym e exec swappy -f $TMP_OUTPUT &&\
+            : , mode "default"
+
+
     bindsym q mode "default"
     bindsym Return mode "default"
     bindsym Escape mode "default"
