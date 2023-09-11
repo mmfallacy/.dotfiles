@@ -9,6 +9,7 @@ return function()
             'gitcommit',
             'gitignore',
             'html',
+            'ini',
             'javascript',
             'jsdoc',
             'jsonc',
