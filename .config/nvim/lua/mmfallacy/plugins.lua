@@ -11,11 +11,16 @@ function plugins(use)
         },
         {
             'navarasu/onedark.nvim',
-            config = require 'mmfallacy.themes.onedark'
+            -- config = require 'mmfallacy.themes.onedark'
         },
         {
             'AlexvZyl/nordic.nvim',
             -- config = require 'mmfallacy.themes.nordic'
+        },
+        {
+            'catppuccin/nvim',
+            as = 'catppuccin',
+            config = require 'mmfallacy.themes.catppuccin'
         }
     }
 
