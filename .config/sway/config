@@ -1,6 +1,7 @@
 include /etc/sway/config.d/*
 include ./bar
 include ./binds
+include ./input
 include ./catppuccin-mocha
 
 set $term kitty

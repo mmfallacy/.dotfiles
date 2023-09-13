@@ -1,0 +1,5 @@
+input * {
+    xkb_options altwin:swap_lalt_lwin
+}
+
+# vim: set ft=swayconfig:
