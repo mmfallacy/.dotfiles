@@ -1,7 +1,7 @@
 return function()
     require "telescope".setup {
         defaults = {
-            file_ignore_patterns = { "node_modules\\", ".git\\", ".svelte-kit\\" },
+            file_ignore_patterns = { "node_modules/", ".git/", ".svelte-kit/" },
         },
         pickers = {
             find_files = {
