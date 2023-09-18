@@ -5,6 +5,10 @@ bindsym $mod+w mode "Fixed Workspaces"
 mode "Fixed Workspaces" {
     bindsym 1 workspace Widgets, mode "default"
     bindsym 2 workspace Notes, mode "default"
+
+    bindsym q mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
 }
 
 # vim: set ft=swayconfig:
