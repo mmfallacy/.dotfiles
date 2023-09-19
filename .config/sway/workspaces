@@ -1,6 +1,20 @@
 bindsym $mod+m          workspace Widgets
+
 bindsym $mod+n          workspace Notes
+
+# ---------------------------------------------------------------------
+# Discord workspace
+# ---------------------------------------------------------------------
 bindsym $mod+z          workspace Discord
+exec discord 
+assign [class=discord] workspace Discord
+
+# ---------------------------------------------------------------------
+# Music workspace
+# ---------------------------------------------------------------------
 bindsym $mod+x          workspace Music
+exec chromium --app="https://music.youtube.com/?source=pwa"
+assign [class=Chromium instance=music.youtube.com] workspace Music
+
 
 # vim: set ft=swayconfig:
