@@ -5,16 +5,16 @@ bindsym $mod+n          workspace Notes
 # ---------------------------------------------------------------------
 # Discord workspace
 # ---------------------------------------------------------------------
-bindsym $mod+z          workspace Discord
+bindsym $mod+z          workspace 11:Discord
 exec discord 
-assign [class=discord] workspace Discord
+assign [class=discord] workspace 11:discord
 
 # ---------------------------------------------------------------------
 # Music workspace
 # ---------------------------------------------------------------------
-bindsym $mod+x          workspace Music
+bindsym $mod+x          workspace 12:music
 exec chromium --app="https://music.youtube.com/?source=pwa"
-assign [class=Chromium instance=music.youtube.com] workspace Music
+assign [class=Chromium instance=music.youtube.com] workspace 12:music
 
 
 # vim: set ft=swayconfig:
