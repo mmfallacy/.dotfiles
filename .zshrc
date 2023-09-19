@@ -15,5 +15,6 @@ compinit
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias icat='kitty +kitten icat'
+alias paru='paru --bottomup'
 
 eval "$(starship init zsh)"
