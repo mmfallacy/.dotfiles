@@ -1,6 +1,7 @@
 include /etc/sway/config.d/*
 include ./bar
 include ./binds
+include ./workspaces
 include ./input
 include ./catppuccin-mocha
 

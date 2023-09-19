@@ -1,0 +1,6 @@
+bindsym $mod+m          workspace Widgets
+bindsym $mod+n          workspace Notes
+bindsym $mod+z          workspace Discord
+bindsym $mod+x          workspace Music
+
+# vim: set ft=swayconfig:
