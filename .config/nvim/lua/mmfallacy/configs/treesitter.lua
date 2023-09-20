@@ -15,7 +15,6 @@ return function()
             'jsonc',
             'latex',
             'lua',
-            'markdown',
             'python',
             'rust',
             'sql',

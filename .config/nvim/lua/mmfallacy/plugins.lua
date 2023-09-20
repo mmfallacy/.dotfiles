@@ -151,6 +151,21 @@ local plugins = {
         opts = {
             dir = "~/Notes",
         },
+    },
+    {
+        'ixru/nvim-markdown',
+        ft = "markdown",
+        config = function()
+            vim.cmd [[
+                let g:vim_markdown_frontmatter = 1
+                let g:vim_markdown_math = 1
+                let g:vim_markdown_conceal = 1
+                let g:vim_markdown_no_default_key_mappings = 1
+            ]]
+        end,
+        keys = {
+        },
+        lazy = false
     }
 }
 
