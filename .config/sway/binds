@@ -62,9 +62,26 @@ bindsym $mod+Shift+comma     splith
 bindsym $mod+Shift+period     splitv
 
 # Create new note
-set $NOTE_VAULT ~/Notes
+set $NOTE_VAULT ~/Notes/
 
-bindsym $mod+Shift+n    exec kitty --class=kitty_noteprompt nvim -c "doautocmd BufWritePre" -c "lua vim.cmd('normal Ga#  ')" -c "startinsert" -- ~/Notes/$(date +%s%N | cut -b1-10)-$(cat /dev/urandom | tr -dc 'A-Z' | fold -w 4 | head -n 1).md
+# Spawn kitty with app_id=kitty_noteprompt
+# Run nvim in the spawned kitty instance with the following arguments:
+#   - File buffer to open: $NOTE_VAULT/<Unix Timestamp>-<Random 4 characters>.md 
+#       - Unix timestamp is generated through `date` with format: %s = seconds from epoch
+#       - Four random characters are generated through using /dev/urandom.
+#           - Truncate non A-Z elements of the random string
+#           - Wrap the lines to fit width of 4 characters
+#           - Retrieve first line of wrapped random string
+#   - Trigger AutoCmd BufWritePre to nudge Obsidian.nvim to add the missing frontmatter
+#   - Add a "# " on the bottom most line and;
+#   - Start in insert mode.
+# Rationale: Simply running :ObsidianNew has the sideeffect of writing the file. This method will
+#           only start a buffer with the frontmatter. It will only be written to the filesystem upon saving.
+bindsym $mod+Shift+n    exec kitty --class=kitty_noteprompt \
+                            nvim -c "doautocmd BufWritePre" \
+                            -c "lua vim.cmd('normal Ga#  ')" \
+                            -c "startinsert" \
+                            -- $NOTE_VAULT/$(date +%s)-$(cat /dev/urandom | tr -dc 'A-Z' | fold -w 4 | head -n 1).md
 
 include ./modes/*
 # vim: set ft=swayconfig:
