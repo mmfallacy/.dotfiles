@@ -22,7 +22,8 @@ local plugins = {
     {
         'nvim-telescope/telescope.nvim',
         dependencies = { 'nvim-lua/plenary.nvim' },
-        config = require 'mmfallacy.configs.telescope'
+        config = require 'mmfallacy.configs.telescope',
+        lazy = false
     },
     {
         'nvim-tree/nvim-tree.lua',
@@ -132,6 +133,24 @@ local plugins = {
     },
     {
         'NoahTheDuke/vim-just',
+    },
+
+    -- Obsidian
+    {
+        "epwalsh/obsidian.nvim",
+        lazy = false,
+        event = {
+            "BufReadPre " .. vim.fn.expand "~" .. "/Notes/**.md",
+            "BufNewFile " .. vim.fn.expand "~" .. "/Notes/**.md",
+        },
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "hrsh7th/nvim-cmp",
+            "nvim-telescope/telescope.nvim",
+        },
+        opts = {
+            dir = "~/Notes",
+        },
     }
 }
 
