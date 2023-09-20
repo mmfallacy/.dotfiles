@@ -61,5 +61,10 @@ bindsym $mod+space      focus mode_toggle
 bindsym $mod+Shift+comma     splith
 bindsym $mod+Shift+period     splitv
 
+# Create new note
+set $NOTE_VAULT ~/Notes
+
+bindsym $mod+Shift+n    exec kitty --class=kitty_noteprompt nvim -c "doautocmd BufWritePre" -c "lua vim.cmd('normal Ga#  ')" -c "startinsert" -- ~/Notes/$(date +%s%N | cut -b1-10)-$(cat /dev/urandom | tr -dc 'A-Z' | fold -w 4 | head -n 1).md
+
 include ./modes/*
 # vim: set ft=swayconfig:
