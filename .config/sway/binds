@@ -83,5 +83,7 @@ bindsym $mod+Shift+n    exec kitty --class=kitty_noteprompt \
                             -c "startinsert" \
                             -- $NOTE_VAULT/$(date +%s)-$(cat /dev/urandom | tr -dc 'A-Z' | fold -w 4 | head -n 1).md
 
+bindsym $mod+Shift+Control+n exec kitty --class=kitty_noteprompt nvim -- $NOTE_VAULT
+
 include ./modes/*
 # vim: set ft=swayconfig:
