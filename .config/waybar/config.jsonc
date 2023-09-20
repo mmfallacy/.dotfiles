@@ -16,8 +16,9 @@
             "2": "2",
             "3": "3",
             "4": "4",
-            "11:discord": "Discord",
-            "12:music": "Music",
+            "11:discord": "",
+            "12:music": "",
+            "13:todo": "",
         }
     },
     "sway/mode": {
