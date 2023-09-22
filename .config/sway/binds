@@ -42,6 +42,12 @@ bindsym $mod+Shift+2    move container to workspace number 2
 bindsym $mod+Shift+3    move container to workspace number 3
 bindsym $mod+Shift+4    move container to workspace number 4
 
+# Move the focused window with the same, but add Shift
+bindsym $mod+Shift+Control+$left move workspace to output left
+bindsym $mod+Shift+Control+$down move workspace to output down
+bindsym $mod+Shift+Control+$up  move workspace to output up
+bindsym $mod+Shift+Control+$right move workspace to output right
+
 workspace_auto_back_and_forth yes
 bindsym $mod+u          workspace back_and_forth
 
