@@ -3,7 +3,7 @@ bindsym $mod+m          workspace Widgets
 # ---------------------------------------------------------------------
 # Discord workspace
 # ---------------------------------------------------------------------
-bindsym $mod+z          workspace 11:Discord
+bindsym $mod+z          workspace 11:discord
 exec discord 
 assign [class=discord] workspace 11:discord
 
