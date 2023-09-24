@@ -13,7 +13,6 @@ return function()
             'javascript',
             'jsdoc',
             'jsonc',
-            'latex',
             'lua',
             'python',
             'rust',
