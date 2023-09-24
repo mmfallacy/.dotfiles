@@ -1,4 +1,3 @@
-include /etc/sway/config.d/*
 include ./bar
 include ./binds
 include ./workspaces
@@ -43,7 +42,9 @@ for_window [app_id="kitty_noteprompt"] floating enable, resize set height 800 px
 
 corner_radius 5
 
+exec_always {
+    kanshi &
+    autotiling &
+}
 
-
-exec_always kanshi
-exec_always autotiling
+include /etc/sway/config.d/*
