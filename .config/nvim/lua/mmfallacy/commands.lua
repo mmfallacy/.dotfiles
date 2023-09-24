@@ -8,3 +8,4 @@ vim.api.nvim_create_user_command(
     { nargs = 1, complete = 'help' }
 )
 vim.cmd("cnoreabbrev hh Help")
+vim.cmd("cnoreabbrev w update")
