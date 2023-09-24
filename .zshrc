@@ -14,6 +14,7 @@ compinit
 # End of lines added by compinstall
 
 alias ls='ls --color=auto'
+alias rm='rm -I'
 alias grep='grep --color=auto'
 alias icat='kitty +kitten icat'
 alias paru='paru --bottomup'
