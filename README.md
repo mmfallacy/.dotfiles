@@ -24,6 +24,8 @@ Neovim is a hyperextensible Vim-based text editor. I currently use [packer.nvim]
 - Install `openssh` for generating 
 - After `stow`-ing, generate a new `ed25519` ssh key in `~/.ssh/id_ed25519` through `ssh-keygen -t ed25519 -c "<email>"`.
 - This then would generate a private ang public ssh key. Add this key then as authentication and signing on GitHub.
+- Also, run `systemctl --user enable --now ssh-agent` to run ssh-agent upon logging in as a user. 
+> Since the ssh config has `AddKeysToAgent=yes`, ssh keys are added upon use (GPG Signing and SSH are deemed different and hence it runs the prompt once for each).
 
 ## Window Manager: `swayfx`
 [Sway](https://swaywm.org/) is a tiling wayland compositor and a drop in replacement for the i3 window manager.
