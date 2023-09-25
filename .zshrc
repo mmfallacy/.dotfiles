@@ -20,3 +20,4 @@ alias icat='kitty +kitten icat'
 alias paru='paru --bottomup'
 
 eval "$(starship init zsh)"
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
