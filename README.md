@@ -37,3 +37,9 @@ Neovim is a hyperextensible Vim-based text editor. I currently use [packer.nvim]
 - `waybar`
 - `wofi` as the launcher.
 - `kitty` as the terminal.
+
+## Google Drive Mirror: `rclone`
+- Initialize config through `rclone config`.
+- Enable 30 min bisync timer through `systemctl --user enable --now rclone-bisync.timer`.
+> Note that this is located in the stowed `.config/systemd/`
+- **TODO:** Explicitly stow `.config/systemd/` as files instead of directory.
