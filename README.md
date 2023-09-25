@@ -38,6 +38,10 @@ Neovim is a hyperextensible Vim-based text editor. I currently use [packer.nvim]
 - `wofi` as the launcher.
 - `kitty` as the terminal.
 
+## Web Browser: `chromium`
+- This is being used by `swayfx-git` to run YT Music upon startup.
+- Head over to `catppuccin/chromium` to style this in accordance to the setup.
+
 ## Google Drive Mirror: `rclone`
 - Initialize config through `rclone config`.
 - Enable 30 min bisync timer through `systemctl --user enable --now rclone-bisync.timer`.
