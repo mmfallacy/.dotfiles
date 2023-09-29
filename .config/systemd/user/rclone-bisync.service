@@ -4,14 +4,13 @@ After=network.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/rclone \
+ExecStart=/usr/bin/rclone bisync \
     UPDrive:UP \
     %h/Cloud/UP \
     --drive-skip-gdocs \
     --fast-list \
     --check-access \
     --max-delete 50 \
-    --resilient \
     -vv
 
 [Install]
