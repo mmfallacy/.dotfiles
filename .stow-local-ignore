@@ -1,4 +1,5 @@
 
+\.nostow
 \.git
 assets
 ^\.gitignore
