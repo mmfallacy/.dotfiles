@@ -185,6 +185,16 @@ local plugins = {
     {
         "iamcco/markdown-preview.nvim",
         build = function() vim.fn["mkdp#util#install"]() end,
+    },
+    {
+        'kaarmu/typst.vim',
+        ft = 'typst',
+        lazy = false,
+        config = function()
+            vim.cmd [[
+                let g:typst_pdf_viewer = 'zathura'
+            ]]
+        end
     }
 }
 

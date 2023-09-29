@@ -11,6 +11,7 @@ require "mason-lspconfig".setup({
         'tailwindcss',
         'eslint',
         'jdtls',
+        'typst_lsp'
     }
 })
 
@@ -106,6 +107,11 @@ lsp.eslint.setup {
 }
 
 lsp.jdtls.setup {
+    on_attach = on_attach,
+    capabilities = caps,
+}
+
+lsp.typst_lsp.setup {
     on_attach = on_attach,
     capabilities = caps,
 }
