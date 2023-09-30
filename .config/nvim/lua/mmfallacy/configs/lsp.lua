@@ -112,8 +112,15 @@ lsp.jdtls.setup {
 }
 
 lsp.typst_lsp.setup {
-    on_attach = on_attach,
+    on_attach = function(client, bufnr)
+        vim.api.nvim_create_autocmd("BufWritePost", {
+            buffer = bufnr,
+            command = "silent !typstfmt %",
+        })
+        on_attach_base(client, bufnr)
+    end,
     capabilities = caps,
+    single_file_support = true,
 }
 
 local null_ls = require "null-ls"
