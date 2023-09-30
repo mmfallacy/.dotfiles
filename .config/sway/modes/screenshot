@@ -77,6 +77,16 @@ mode "screenshot" {
     bindsym e exec swappy -f $TMP_OUTPUT &&\
             : , mode "default"
 
+    # Latex image to latex code
+    bindsym Shift+m exec slurp |\
+            tee $TMP_LAST_REGION |\
+            xargs -I {} grim -g "{}" -|\
+            tee $TMP_OUTPUT &&\
+            pix2tex $TMP_OUTPUT --no-resize |\
+            sed "s/.*: //" |\
+            wl-copy &&\
+            notify-send --icon=$TMP_OUTPUT -t $NOTIFY_DUR $SUCCESS_MSG &&\
+            : , mode "default"
 
     bindsym q mode "default"
     bindsym Return mode "default"
