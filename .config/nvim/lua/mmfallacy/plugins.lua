@@ -79,6 +79,7 @@ local plugins = {
 
     {
         'lukas-reineke/indent-blankline.nvim',
+        main = "ibl",
         config = require 'mmfallacy.configs.indents'
     },
 
@@ -195,6 +196,14 @@ local plugins = {
                 let g:typst_pdf_viewer = 'zathura'
             ]]
         end
+    },
+    {
+        "jiaoshijie/undotree",
+        dependencies = "nvim-lua/plenary.nvim",
+        config = true,
+        keys = { -- load the plugin only when using it's keybinding:
+            { "<leader>u", "<cmd>lua require('undotree').toggle()<cr>" },
+        },
     }
 }
 
