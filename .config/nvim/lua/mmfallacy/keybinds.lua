@@ -41,3 +41,6 @@ map({ 'n' }, '<leader>fo', "<cmd>ObsidianSearch<CR>", silent_noremap)
 
 -- Save (noop when not modified)
 map({ 'n', 'v', 'i' }, "<C-s>", "<cmd>update<CR>", silent_noremap)
+
+-- Select whole line except indents and newline
+map({ 'n' }, "<leader>V", "^vg_", silent_noremap)
