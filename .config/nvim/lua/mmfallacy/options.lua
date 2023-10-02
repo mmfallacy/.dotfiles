@@ -38,3 +38,4 @@ o.splitbelow = false
 o.splitright = false
 
 o.modeline = true
+o.undofile = true
