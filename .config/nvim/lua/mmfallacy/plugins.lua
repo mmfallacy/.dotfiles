@@ -197,6 +197,22 @@ local plugins = {
             ]]
         end
     },
+    {
+        'ekickx/clipboard-image.nvim',
+        keys = {
+            { "<leader>pi", "<cmd>PasteImage<CR>", desc = "Paste Image from clipboard" }
+        },
+        config = function()
+            require 'clipboard-image'.setup {
+                default = {
+                    img_dir = "assets",
+                },
+                typst = {
+                    affix = "#image(%s)"
+                }
+            }
+        end
+    }
 }
 
 require 'lazy'.setup(plugins)
