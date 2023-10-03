@@ -57,6 +57,21 @@ I use telescope mainly to:
 
 > Ensure that `ripgrep` is installed.
 
+## File Explorer: `nvim-tree.lua`
+I mainly use `nvim-tree.lua` for navigating through the current open directory as well as creating new files, deleting or moving existing files, etc.
+
+> Ensure that you have a Nerd Font installed.
+
+## `echasnovski`'s Swiss Army Knife: `mini.nvim`
+[`mini.nvim`](https://github.com/echasnovski/mini.nvim) is a collection of independent nvim plugins which aim to improve overall neovim experience with minimal effort.
+
+Listed below are the modules from `mini.nvim` I use:
+- `mini.comment`: Leverages `commentstring` or `treesitter` to comment/uncomment lines
+- `mini.surround`: Lets you surround a selected section in quotes, parenthesis, brackets, etc.
+- `mini.cursorword`: Highlights neovim "word" under cursor
+- `mini.pairs`: Adds corresponding closing characters when you type `(`,`[`,`{`, etc. 
+- `mini.tabline`: Topbar which displays all the opened buffers
+
 ## Miscellaneous
 - `catpuccin/nvim`: Serves as my default color scheme which adheres to the common theme of this whole dotfiles repo
 - `norcalli/nvim-colorizer`: Adds corresponding color highlight to hex colors and the likes.
