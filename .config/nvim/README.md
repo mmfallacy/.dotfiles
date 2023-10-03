@@ -44,3 +44,13 @@ TODO
 
 ### Typst: `typst_lsp:typst-lsp`
 TODO
+
+## Miscellaneous
+- `catpuccin/nvim`: Serves as my default color scheme which adheres to the common theme of this whole dotfiles repo
+- `norcalli/nvim-colorizer`: Adds corresponding color highlight to hex colors and the likes.
+- `folke/todo-comments`: Highlights todo comments with telescope integration
+- `epwalsh/obsidian.nvim`: Plugin for writing and navigating an Obsidian vault.
+- `iamcco/markdown-preview.nvim`: Previews markdown on browser with synchronized scrolling
+- `TobinPalmer/pastify.nvim`: Ability to paste images in clipboard to the current document. Creates an `/assets/img` folder containing the images and pastes a link to it.
+
+
