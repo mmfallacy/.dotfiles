@@ -214,6 +214,10 @@ local plugins = {
             }
         end,
         lazy = false
+    },
+    {
+        "stevearc/conform.nvim",
+        opts = {}
     }
 }
 
