@@ -79,5 +79,8 @@ Listed below are the modules from `mini.nvim` I use:
 - `epwalsh/obsidian.nvim`: Plugin for writing and navigating an Obsidian vault.
 - `iamcco/markdown-preview.nvim`: Previews markdown on browser with synchronized scrolling
 - `TobinPalmer/pastify.nvim`: Ability to paste images in clipboard to the current document. Creates an `/assets/img` folder containing the images and pastes a link to it.
+- `lukas-reineke/indent-blankline.nvim`: Indentation guides
+- `AndrewRadev/tagalong.vim`: Rename closing HTML/XML tags upon editing opening tag.
+- `lewis6991/gitsigns.nvim`: Adds decoration to modified lines etc.
 
 
