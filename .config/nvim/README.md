@@ -53,6 +53,23 @@ TODO
 ### Typst: `typst_lsp:typst-lsp`
 TODO
 
+### Other LSP-related Plugins:
+- `williamboman/mason.nvim`
+- `williamboman/mason-lspconfig.nvim`
+- `jose-elias-alvarez/null-ls.nvim` *(For removal)*
+
+## Snippets and Completion
+I use the following plugins for snippets and completion.
+**Completion Plugin:** `nvim-cmp`
+**Completion Sources:**
+- `hrsh7th/cmp-buffer`
+- `saadparwaiz1/cmp_luasnip`
+- `hrsh7th/cmp-nvim-lsp`
+- `hrsh7th/cmp-path`
+**Snippet Engine:** `L3MON4D3/LuaSnip`
+**Snippet Sources:**
+- `rafamadriz/friendly-snippets`
+
 ## Fuzzy Finder: `telescope.nvim`
 I use telescope mainly to:
 - Select a git recognized file
