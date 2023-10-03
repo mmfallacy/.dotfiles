@@ -8,6 +8,14 @@ I opted to use [lazy.nvim](https://github.com/folke/lazy.nvim) instead of the no
 - Manage plugins using a UI
 - Automatic install if lazy is not yet installed.
 
+## Syntax Analyzers:
+Listed below are the plugins I use which could classify as syntax analyzers.
+- `nvim-treesitter`: Offers syntax highlighting and parsing by acting as an interface to `tree-sitter` for Neovim.
+- `vim-just`: Syntax highlighting for justfiles.
+- `nvim-markdown`: Syntax highlighting for markdown files. Offers concealment for formatting and links
+- `vimtex`: Syntax highlighting for tex files. Also provides commands for viewing, compiling, watching tex files. Also offers concealment.
+- `typst.vim`: Syntax highlighting for typst files. Basic concealment.
+
 ## LSP Client: Builtin Neovim LSP Client
 LSP Configurations are handled by [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 The following are the LSPs installed in this neovim configuration:
