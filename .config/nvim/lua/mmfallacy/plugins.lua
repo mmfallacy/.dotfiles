@@ -198,20 +198,22 @@ local plugins = {
         end
     },
     {
-        'ekickx/clipboard-image.nvim',
+        'TobinPalmer/pastify.nvim',
         keys = {
-            { "<leader>pi", "<cmd>PasteImage<CR>", desc = "Paste Image from clipboard" }
+            { "<leader>pi", "<cmd>Pastify<CR>", desc = "Paste Image from clipboard" }
         },
         config = function()
-            require 'clipboard-image'.setup {
-                default = {
-                    img_dir = "assets",
+            require 'pastify'.setup {
+                opts = {
+                    local_path = '/assets/imgs/',
+                    save = 'local'
                 },
-                typst = {
-                    affix = "#image(%s)"
+                ft = {
+                    typst = "#image(\"$IMG$\")"
                 }
             }
-        end
+        end,
+        lazy = false
     }
 }
 
