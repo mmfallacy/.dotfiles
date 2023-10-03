@@ -45,6 +45,18 @@ TODO
 ### Typst: `typst_lsp:typst-lsp`
 TODO
 
+## Fuzzy Finder: `telescope.nvim`
+I use telescope mainly to:
+- Select a git recognized file
+- Live substring search across files through `ripgrep`
+- Selecting files part of current opened directory
+- Selecting files part of `stdpath('config')`.
+- Picking from a list of treesitter symbols
+- Picking form a list of buffers
+- Picking from a list of TODO comments
+
+> Ensure that `ripgrep` is installed.
+
 ## Miscellaneous
 - `catpuccin/nvim`: Serves as my default color scheme which adheres to the common theme of this whole dotfiles repo
 - `norcalli/nvim-colorizer`: Adds corresponding color highlight to hex colors and the likes.
