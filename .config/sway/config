@@ -37,6 +37,7 @@ set $opacity 0.8
 for_window [app_id="$term"] opacity $opacity
 for_window [app_id=".*"] opacity $opacity
 for_window [class=".*"] opacity $opacity
+for_window [app_id="org.pwmt.zathura"] opacity 1
 
 for_window [app_id="kitty_noteprompt"] floating enable, resize set height 800 px, resize set width 1200 px
 
