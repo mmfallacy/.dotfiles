@@ -74,7 +74,7 @@ local plugins = {
 
     {
         'echasnovski/mini.pairs',
-        config = require 'mmfallacy.configs.autopairs'
+        config = function() require 'mini.pairs'.setup {} end
     },
 
     {
