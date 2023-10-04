@@ -59,7 +59,15 @@ local plugins = {
 
     {
         'echasnovski/mini.comment',
-        config = require 'mmfallacy.configs.comment'
+        config = function()
+            require 'mini.comment'.setup {
+                mappings = {
+                    comment = 'gc',
+                    comment_line = 'gcc',
+                    textobject = 'gc',
+                }
+            }
+        end
     },
 
     {
