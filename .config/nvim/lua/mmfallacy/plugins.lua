@@ -124,10 +124,6 @@ local plugins = {
         "williamboman/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
     },
-    {
-        "jose-elias-alvarez/null-ls.nvim",
-        dependencies = { "nvim-lua/plenary.nvim" },
-    },
     { "rafamadriz/friendly-snippets" },
     { "L3MON4D3/LuaSnip" },
     {
