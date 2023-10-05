@@ -2,14 +2,14 @@ local g = vim.g
 local o = vim.o
 
 -- Globals
-g.mapleader = ' '
+g.mapleader = " "
 g.netrw_liststyle = 3
 
 -- Clipboard
-vim.opt.clipboard = 'unnamedplus'
+vim.opt.clipboard = "unnamedplus"
 
 -- Interface
-o.mouse = 'n'
+o.mouse = "n"
 o.ruler = true
 o.wrap = false
 o.scrolloff = 8

@@ -1,16 +1,15 @@
 local function on_attach(bufnr)
-    local api = require('nvim-tree.api')
+    local api = require "nvim-tree.api"
 
     local function opts(desc)
-        return { desc = 'nvim-tree: ' .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
+        return { desc = "nvim-tree: " .. desc, buffer = bufnr, noremap = true, silent = true, nowait = true }
     end
 
     api.config.mappings.default_on_attach(bufnr)
-
 end
 
 return function()
-    require 'nvim-tree'.setup {
+    require("nvim-tree").setup {
         on_attach = on_attach,
         auto_reload_on_write = false,
         update_cwd = true,
@@ -30,8 +29,7 @@ return function()
             },
         },
         view = {
-            side = 'right',
+            side = "right",
         },
     }
-
 end

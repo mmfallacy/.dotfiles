@@ -1,13 +1,13 @@
 return function()
-    require("catppuccin").setup({
+    require("catppuccin").setup {
         flavor = "mocha",
-    })
+    }
 
     vim.cmd.colorscheme "catppuccin"
 
-    require('lualine').setup {
+    require("lualine").setup {
         options = {
-            theme = "catppuccin"
-        }
+            theme = "catppuccin",
+        },
     }
 end

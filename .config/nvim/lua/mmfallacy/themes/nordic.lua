@@ -1,7 +1,6 @@
 return function()
-    local nordic = require 'nordic'
+    local nordic = require "nordic"
 
-    nordic.setup {
-    }
+    nordic.setup {}
     nordic.load()
 end
