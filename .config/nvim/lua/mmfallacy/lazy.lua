@@ -144,22 +144,6 @@ local plugins = {
 
     -- Obsidian
     {
-        "epwalsh/obsidian.nvim",
-        lazy = false,
-        event = {
-            "BufReadPre " .. vim.fn.expand "~" .. "/Notes/**.md",
-            "BufNewFile " .. vim.fn.expand "~" .. "/Notes/**.md",
-        },
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "hrsh7th/nvim-cmp",
-            "nvim-telescope/telescope.nvim",
-        },
-        opts = {
-            dir = "~/Notes",
-        },
-    },
-    {
         "ixru/nvim-markdown",
         ft = "markdown",
         config = function()
