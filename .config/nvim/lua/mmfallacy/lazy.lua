@@ -13,13 +13,6 @@ vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
     {
-        "nvim-telescope/telescope.nvim",
-        dependencies = { "nvim-lua/plenary.nvim" },
-        config = require "mmfallacy.configs.telescope",
-        lazy = false,
-    },
-
-    {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
