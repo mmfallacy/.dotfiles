@@ -245,6 +245,7 @@ local plugins = {
             }
         end,
     },
+    { import = "mmfallacy.plugins" },
 }
 
 require("lazy").setup(plugins)
