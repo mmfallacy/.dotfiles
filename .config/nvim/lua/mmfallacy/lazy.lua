@@ -159,16 +159,6 @@ local plugins = {
         end,
     },
     {
-        "kaarmu/typst.vim",
-        ft = "typst",
-        lazy = false,
-        config = function()
-            vim.cmd [[
-                let g:typst_pdf_viewer = 'zathura'
-            ]]
-        end,
-    },
-    {
         "stevearc/conform.nvim",
         config = function()
             require("conform").setup {
