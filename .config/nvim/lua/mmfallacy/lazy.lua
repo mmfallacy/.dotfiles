@@ -214,24 +214,6 @@ local plugins = {
         end,
     },
     {
-        "TobinPalmer/pastify.nvim",
-        keys = {
-            { "<leader>pi", "<cmd>Pastify<CR>", desc = "Paste Image from clipboard" },
-        },
-        config = function()
-            require("pastify").setup {
-                opts = {
-                    local_path = "/assets/imgs/",
-                    save = "local",
-                },
-                ft = {
-                    typst = '#image("$IMG$")',
-                },
-            }
-        end,
-        lazy = false,
-    },
-    {
         "stevearc/conform.nvim",
         config = function()
             require("conform").setup {
@@ -246,6 +228,7 @@ local plugins = {
         end,
     },
     { import = "mmfallacy.plugins" },
+    { import = "mmfallacy.plugins.misc" },
 }
 
 require("lazy").setup(plugins)
