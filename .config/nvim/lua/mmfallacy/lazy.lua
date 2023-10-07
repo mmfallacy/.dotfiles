@@ -60,29 +60,6 @@ local plugins = {
         "williamboman/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
     },
-    { "rafamadriz/friendly-snippets" },
-    { "L3MON4D3/LuaSnip" },
-    {
-        "hrsh7th/nvim-cmp",
-        dependencies = { "L3MON4D3/LuaSnip" },
-        config = require "mmfallacy.configs.cmp",
-    },
-    {
-        "hrsh7th/cmp-buffer",
-        dependencies = { "hrsh7th/nvim-cmp" },
-    },
-    {
-        "saadparwaiz1/cmp_luasnip",
-        dependencies = { "hrsh7th/nvim-cmp" },
-    },
-    {
-        "hrsh7th/cmp-nvim-lsp",
-        dependencies = { "hrsh7th/nvim-cmp" },
-    },
-    {
-        "hrsh7th/cmp-path",
-        dependencies = { "hrsh7th/nvim-cmp" },
-    },
     {
         "lewis6991/gitsigns.nvim",
         config = function()
