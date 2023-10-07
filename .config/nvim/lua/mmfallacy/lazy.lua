@@ -37,14 +37,6 @@ local plugins = {
             require("colorizer").setup()
         end,
     },
-    {
-        "AndrewRadev/tagalong.vim",
-        config = function()
-            vim.cmd [[
-                let g:tagalong_additional_filetypes = ['svelte']
-            ]]
-        end,
-    },
 
     {
         "lukas-reineke/indent-blankline.nvim",
