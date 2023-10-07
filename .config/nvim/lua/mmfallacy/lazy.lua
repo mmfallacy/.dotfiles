@@ -47,53 +47,12 @@ local plugins = {
     },
 
     {
-        "echasnovski/mini.comment",
-        config = function()
-            require("mini.comment").setup {
-                mappings = {
-                    comment = "gc",
-                    comment_line = "gcc",
-                    textobject = "gc",
-                },
-            }
-        end,
-    },
-
-    {
-        "echasnovski/mini.surround",
-        config = function()
-            require("mini.surround").setup()
-        end,
-    },
-
-    {
-        "echasnovski/mini.cursorword",
-        config = function()
-            require("mini.cursorword").setup()
-        end,
-    },
-
-    {
-        "echasnovski/mini.pairs",
-        config = function()
-            require("mini.pairs").setup {}
-        end,
-    },
-
-    {
         "lukas-reineke/indent-blankline.nvim",
         main = "ibl",
         config = function()
             vim.opt.list = true
             vim.opt.listchars:append "eol:↴"
             require("ibl").setup {}
-        end,
-    },
-
-    {
-        "echasnovski/mini.tabline",
-        config = function()
-            require("mini.tabline").setup()
         end,
     },
 
