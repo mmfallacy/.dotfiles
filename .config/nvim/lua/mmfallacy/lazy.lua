@@ -144,21 +144,6 @@ local plugins = {
 
     -- Obsidian
     {
-        "lervag/vimtex",
-        lazy = false,
-        config = function()
-            -- Attach autocmd as tectonic does not support auto recompile
-            vim.cmd [[
-                filetype plugin indent on
-                syntax enable
-                let g:vimtex_view_method = 'zathura'
-                let g:vimtex_compiler_method = 'tectonic'
-
-                autocmd BufWritePre *.tex silent VimtexCompileSS
-            ]]
-        end,
-    },
-    {
         "stevearc/conform.nvim",
         config = function()
             require("conform").setup {
