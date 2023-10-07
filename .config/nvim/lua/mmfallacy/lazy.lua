@@ -12,7 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-    -- Themes
     {
         "nvim-telescope/telescope.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
@@ -20,16 +19,6 @@ local plugins = {
         lazy = false,
     },
 
-    -- Syntax analyzers
-    {
-        "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate",
-        config = require "mmfallacy.configs.treesitter",
-    },
-
-    -- Lualine
-
-    -- LSP and Snippets
     {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
@@ -42,4 +31,3 @@ local plugins = {
 }
 
 require("lazy").setup(plugins)
--- return require 'packer'.startup(plugins)
