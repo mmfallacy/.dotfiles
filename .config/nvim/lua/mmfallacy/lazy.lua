@@ -19,10 +19,6 @@ local plugins = {
         config = require "mmfallacy.configs.telescope",
         lazy = false,
     },
-    {
-        "nvim-tree/nvim-tree.lua",
-        config = require "mmfallacy.configs.nvim-tree",
-    },
 
     -- Syntax analyzers
     {
