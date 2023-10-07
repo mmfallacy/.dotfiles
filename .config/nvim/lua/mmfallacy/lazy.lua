@@ -31,13 +31,6 @@ local plugins = {
         config = require "mmfallacy.configs.treesitter",
     },
 
-    {
-        "norcalli/nvim-colorizer.lua",
-        config = function()
-            require("colorizer").setup()
-        end,
-    },
-
     -- Lualine
     {
         "nvim-lualine/lualine.nvim",
@@ -49,15 +42,6 @@ local plugins = {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
-    },
-    {
-        "lewis6991/gitsigns.nvim",
-        config = function()
-            require("gitsigns").setup()
-        end,
-    },
-    {
-        "NoahTheDuke/vim-just",
     },
 
     -- Obsidian
