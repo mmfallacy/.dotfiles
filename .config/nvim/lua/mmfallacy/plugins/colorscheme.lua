@@ -2,5 +2,15 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
-    config = require "mmfallacy.plugins.themes.catppuccin",
+    config = function()
+        require("catppuccin").setup {
+            flavor = "mocha",
+        }
+        vim.cmd.colorscheme "catppuccin"
+        require("lualine").setup {
+            options = {
+                theme = "catppuccin",
+            },
+        }
+    end,
 }
