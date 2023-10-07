@@ -14,12 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 local plugins = {
     -- Themes
     {
-        "catppuccin/nvim",
-        name = "catppuccin",
-        priority = 1000,
-        config = require "mmfallacy.themes.catppuccin",
-    },
-    {
         "nvim-telescope/telescope.nvim",
         dependencies = { "nvim-lua/plenary.nvim" },
         config = require "mmfallacy.configs.telescope",
