@@ -144,20 +144,6 @@ local plugins = {
 
     -- Obsidian
     {
-        "ixru/nvim-markdown",
-        ft = "markdown",
-        config = function()
-            vim.cmd [[
-                let g:vim_markdown_frontmatter = 1
-                let g:vim_markdown_math = 1
-                let g:vim_markdown_conceal = 1
-                let g:vim_markdown_no_default_key_mappings = 1
-            ]]
-        end,
-        keys = {},
-        lazy = false,
-    },
-    {
         "lervag/vimtex",
         lazy = false,
         config = function()
@@ -170,12 +156,6 @@ local plugins = {
 
                 autocmd BufWritePre *.tex silent VimtexCompileSS
             ]]
-        end,
-    },
-    {
-        "iamcco/markdown-preview.nvim",
-        build = function()
-            vim.fn["mkdp#util#install"]()
         end,
     },
     {
