@@ -12,13 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 local plugins = {
-    {
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim",
-        "neovim/nvim-lspconfig",
-    },
-
-    -- Obsidian
     { import = "mmfallacy.plugins" },
     { import = "mmfallacy.plugins.misc" },
 }
