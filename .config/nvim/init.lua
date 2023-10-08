@@ -1,5 +1,4 @@
-require "mmfallacy.plugins"
 require "mmfallacy.options"
+require "mmfallacy.lazy"
 require "mmfallacy.keybinds"
 require "mmfallacy.commands"
-require "mmfallacy.configs.lsp"
