@@ -13,7 +13,9 @@ Cmp.event = "InsertEnter"
 function Cmp.config()
     require("luasnip.loaders.from_vscode").lazy_load()
     local cmp = require "cmp"
+    ---@diagnostic disable-next-line missing-fields
     cmp.setup {
+        ---@diagnostic disable-next-line missing-fields
         view = { entries = "native" },
         snippet = {
             expand = function(args)
