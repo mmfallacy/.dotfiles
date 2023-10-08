@@ -10,6 +10,17 @@ local M = {
     build = ":TSUpdate",
 }
 
+M.event = { "BufReadPre", "BufNewFile" }
+
+M.keys = {
+    {
+        "c[",
+        function()
+            require("treesitter-context").go_to_context()
+        end,
+    },
+}
+
 function M.config()
     require("nvim-treesitter.configs").setup {
         ensure_installed = {
