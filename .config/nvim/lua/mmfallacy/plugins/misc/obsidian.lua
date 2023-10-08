@@ -16,4 +16,8 @@ M.opts = {
     dir = "~/Notes",
 }
 
+M.keys = {
+    { "<leader>fo", "<cmd>ObsidianSearch<CR>" },
+}
+
 return M

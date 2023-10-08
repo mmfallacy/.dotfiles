@@ -26,8 +26,6 @@ map({ "n", "v" }, "<Left>", "<nop>")
 map({ "n", "v" }, "<Right>", "<nop>")
 map({ "n" }, "K", "<nop>")
 
-map({ "n" }, "<leader>fo", "<cmd>ObsidianSearch<CR>", silent_noremap)
-
 -- Save (noop when not modified)
 map({ "n", "v", "i" }, "<C-s>", "<cmd>update<CR>", silent_noremap)
 
