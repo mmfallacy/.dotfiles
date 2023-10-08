@@ -2,19 +2,21 @@ local M = {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
+    dependencies = {
+        "hrsh7th/nvim-cmp",
+    },
 }
 
-local caps = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
-
-local function c(config)
-    return vim.tbl_deep_extend("force", {
-        on_attach = on_attach,
-        capabilities = caps,
-    }, config or {})
-end
-
 function M.config()
+    local caps = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
     local lsp = require "lspconfig"
+
+    local function c(config)
+        return vim.tbl_deep_extend("force", {
+            on_attach = on_attach,
+            capabilities = caps,
+        }, config or {})
+    end
 
     require("mason").setup {}
     require("mason-lspconfig").setup {
