@@ -29,12 +29,26 @@ function M.config()
             "tailwindcss",
             "jdtls",
             "typst_lsp",
+            "eslint",
         },
     }
 
     require("mason-lspconfig").setup_handlers {
         function(server_name)
             lsp[server_name].setup(c())
+        end,
+
+        ["eslint"] = function()
+            lsp.eslint.setup {
+                on_attach = function(client, bufnr)
+                    vim.api.nvim_create_autocmd("BufWritePre", {
+                        buffer = bufnr,
+                        command = "EslintFixAll",
+                    })
+                    on_attach(client, bufnr)
+                end,
+                capabilities = caps,
+            }
         end,
 
         ["lua_ls"] = function()
