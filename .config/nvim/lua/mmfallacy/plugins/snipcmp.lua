@@ -8,6 +8,8 @@ local Cmp = {
     },
 }
 
+Cmp.event = "InsertEnter"
+
 function Cmp.config()
     require("luasnip.loaders.from_vscode").lazy_load()
     local cmp = require "cmp"
