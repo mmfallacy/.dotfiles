@@ -4,6 +4,8 @@ local M = {
         "williamboman/mason.nvim",
         "williamboman/mason-lspconfig.nvim",
         "hrsh7th/nvim-cmp",
+        -- Other
+        { "folke/neodev.nvim", opts = {} },
     },
 }
 
@@ -56,9 +58,13 @@ function M.config()
         end,
 
         ["lua_ls"] = function()
+            require("neodev").setup {}
             lsp.lua_ls.setup(c {
                 settings = {
                     Lua = {
+                        workspace = {
+                            checkThirdParty = false,
+                        },
                         diagnostics = {
                             globals = { "vim" },
                         },
