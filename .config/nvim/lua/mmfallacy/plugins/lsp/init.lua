@@ -1,11 +1,13 @@
 local M = {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
     dependencies = {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
         "hrsh7th/nvim-cmp",
     },
 }
+
+M.event = { "BufReadPre", "BufNewFile" }
 
 function M.config()
     local caps = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
