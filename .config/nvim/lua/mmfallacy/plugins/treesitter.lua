@@ -1,3 +1,10 @@
+local N = {
+    "nvim-treesitter/nvim-treesitter-context",
+    config = function()
+        require("treesitter-context").setup {}
+    end,
+}
+
 local M = {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
@@ -38,4 +45,8 @@ function M.config()
         },
     }
 end
-return M
+
+return {
+    N,
+    M,
+}
