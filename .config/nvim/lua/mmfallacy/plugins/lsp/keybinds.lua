@@ -1,7 +1,6 @@
-function on_attach(_, bufnr)
-    local opts = { noremap = true, silent = true }
+return function(_, bufnr)
     local function bufmap(combo, macro)
-        vim.api.nvim_buf_set_keymap(bufnr, "n", combo, macro, opts)
+        vim.keymap.set("n", combo, macro, { buffer = bufnr, noremap = true, silent = true })
     end
 
     vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
@@ -39,5 +38,3 @@ function on_attach(_, bufnr)
     -- Show document Symbols
     bufmap("<leader>ds", t.lsp_document_symbols)
 end
-
-return on_attach
