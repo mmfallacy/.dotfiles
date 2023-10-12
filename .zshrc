@@ -6,6 +6,19 @@ setopt nomatch notify
 setopt extendedglob
 bindkey -v
 # End of lines configured by zsh-newuser-install
+
+# Created by Zap installer
+[ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
+plug "zsh-users/zsh-autosuggestions"
+plug "zap-zsh/supercharge"
+plug "zap-zsh/zap-prompt"
+plug "zsh-users/zsh-syntax-highlighting"
+
+# End of lines configured by Zap installer
+
+plug "agkozak/zsh-z"
+zstyle ':completion:*' menu select
+
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/mmfallacy/.zshrc'
 
