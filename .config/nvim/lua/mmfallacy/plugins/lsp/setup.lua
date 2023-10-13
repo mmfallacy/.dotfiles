@@ -24,7 +24,9 @@ return function()
             "tailwindcss",
             "jdtls",
             "typst_lsp",
+
             "biome",
+            "eslint",
         },
     }
 
