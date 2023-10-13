@@ -1,6 +1,9 @@
 local M = {
     "nvim-telescope/telescope.nvim",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+        "nvim-telescope/telescope-ui-select.nvim",
+    },
 }
 
 function M.config()
@@ -15,6 +18,7 @@ function M.config()
             },
         },
     }
+    require("telescope").load_extension "ui-select"
 end
 
 M.keys = {

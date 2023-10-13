@@ -64,3 +64,6 @@ esac
 # cargo
 export PATH="$HOME/.cargo/bin:$PATH"
 # cargo end
+
+# Use mason as a "plugin manager" for linters and formatters
+export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"

@@ -24,7 +24,7 @@ return function()
             "tailwindcss",
             "jdtls",
             "typst_lsp",
-            "eslint",
+            "biome",
         },
     }
 
@@ -32,6 +32,10 @@ return function()
         function(server_name)
             lsp[server_name].setup(c())
         end,
+
+        -- Exclusions
+        ["biome"] = function() end,
+        --
 
         ["eslint"] = function()
             lsp.eslint.setup {

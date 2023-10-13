@@ -10,6 +10,8 @@ function M.config()
         },
         formatters_by_ft = {
             lua = { "stylua" },
+            javascript = { "biome" },
+            typescript = { "biome" },
         },
     }
 end
