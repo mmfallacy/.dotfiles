@@ -11,7 +11,10 @@ map({ "n", "v", "c", "i" }, "<C-c>", "<Esc>")
 map("n", "<leader>]", vim.cmd.bnext)
 map("n", "<leader>[", vim.cmd.bprev)
 map("n", "<leader>bd", ":confirm bd | bp<CR>", silent_noremap)
-map("n", "<leader>n", ":NvimTreeToggle<CR>", noremap)
+
+-- NvimTree Remaps
+map("n", "<leader>N", ":NvimTreeToggle<CR>", noremap)
+map("n", "<leader>n", ":NvimTreeToggleFocus<CR>", noremap)
 
 -- Line Transforms using Alt (ful1e5)
 
