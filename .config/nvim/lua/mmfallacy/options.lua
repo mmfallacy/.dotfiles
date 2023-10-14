@@ -35,7 +35,7 @@ o.incsearch = true
 
 -- Split
 o.splitbelow = false
-o.splitright = false
+o.splitright = true
 
 o.modeline = true
 o.undofile = true
