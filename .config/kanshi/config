@@ -4,7 +4,7 @@ profile Home {
 	output "XMI Mi Monitor 0000000000000" position 840,0 mode 3440x1440@99.991997Hz
 
     exec swaymsg workspace number 1, move workspace to output '"XMI Mi Monitor 0000000000000"' "eDP-1",
-    exec swaymsg workspace 11:discord, move workspace to output '"Lenovo Group Limited G24-20 U533923C"' "eDP-1",
+    exec swaymsg workspace 11:discord, move workspace to output "eDP-1",
     exec swaymsg workspace 12:music, move workspace to output '"Lenovo Group Limited G24-20 U533923C"' "eDP-1",
     exec swaymsg workspace 13:todo, move workspace to output '"Lenovo Group Limited G24-20 U533923C"' "eDP-1"
     exec swaymsg workspace number 1
