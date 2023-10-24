@@ -15,6 +15,6 @@ profile Laptop {
 }
 
 profile Dorm {
-	output eDP-1 position 1920,0 mode 1920x1080@60.019Hz
-	output "ASUSTek COMPUTER INC ASUS VP248 J9LMTF140286" position 0,0 mode 1920x1080@74.986Hz
+	output eDP-1 position 0,0 mode 1920x1080@60.019Hz scale 1.2
+	output "ASUSTek COMPUTER INC ASUS VP248 J9LMTF140286" position 1600,0 mode 1920x1080@74.986Hz
 }
