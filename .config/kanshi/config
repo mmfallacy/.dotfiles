@@ -8,6 +8,8 @@ profile Home {
     exec swaymsg workspace 12:music, move workspace to output '"Lenovo Group Limited G24-20 U533923C"' "eDP-1",
     exec swaymsg workspace 13:todo, move workspace to output '"Lenovo Group Limited G24-20 U533923C"' "eDP-1"
     exec swaymsg workspace number 1
+
+    exec wpctl set-default $(wpctl status | grep "Sinks:" -A 3 -m 1 | grep -Po "(\d+). GA106" | grep -Po "(\d+)" | head -n 1)
 }
 
 profile Laptop {
@@ -17,4 +19,9 @@ profile Laptop {
 profile Dorm {
 	output eDP-1 position 0,0 mode 1920x1080@60.019Hz scale 1.2
 	output "ASUSTek COMPUTER INC ASUS VP248 J9LMTF140286" position 1600,0 mode 1920x1080@74.986Hz
+    # Set default audio sink:
+    # get status, retrieve sink list (grep first match and next 3 lines), get Built-in Audio Analog Stereo number and set
+    exec wpctl set-default $(wpctl status | grep "Sinks:" -A 3 -m 1 | grep -Po "(\d+). Built-in Audio Analog Stereo" | grep -Po "(\d+)" | head -n 1) 
+    
 }
+# vim: set ft=swayconfig:
