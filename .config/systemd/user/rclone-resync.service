@@ -1,0 +1,18 @@
+[Unit]
+Description=Resyncs the local drive copy of `GDrive:UP` to `~/Cloud/UP` via rclone.
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/rclone bisync \
+    UPDrive:UP \
+    %h/Cloud/UP \
+    --resync \
+    --drive-skip-gdocs \
+    --fast-list \
+    --check-access \
+    --max-delete 50 \
+    -vv
+
+[Install]
+WantedBy=default.target
