@@ -29,7 +29,7 @@ compinit
 alias ls='ls --color=auto'
 alias rm='rm -I'
 alias grep='grep --color=auto'
-alias icat='kitty +kitten icat'
+alias kk='kitty +kitten'
 alias paru='paru --bottomup'
 
 eval "$(starship init zsh)"
@@ -66,4 +66,4 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # cargo end
 
 # Use mason as a "plugin manager" for linters and formatters
-export PATH="$HOME/.local/share/nvim/mason/bin:$PATH"
+export PATH="~/.local/share/nvim/mason/bin:$PATH"
