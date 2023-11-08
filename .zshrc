@@ -32,6 +32,10 @@ alias grep='grep --color=auto'
 alias kk='kitty +kitten'
 alias paru='paru --bottomup'
 
+function activate() {
+    source $1/bin/activate
+}
+
 eval "$(starship init zsh)"
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
