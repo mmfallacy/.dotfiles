@@ -39,3 +39,5 @@ o.splitright = true
 
 o.modeline = true
 o.undofile = true
+
+g.python3_host_prog = vim.fn.expand("~/pynvim/Scripts/python.exe")
