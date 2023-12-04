@@ -3,7 +3,7 @@
 [init]
     defaultBranch = main
 [user]
-	email = monasterialma@gmail.com
+	email = monasterialma+github@gmail.com
 	name = mmfallacy
 	signingkey = /home/mmfallacy/.ssh/id_ed25519
 [gpg]
